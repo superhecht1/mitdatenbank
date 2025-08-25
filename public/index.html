@@ -1551,5 +1551,45 @@
             });
         });
     </script>
+    <!-- === Klientenverwaltung START === -->
+
+<h1>Klienten <span id="clientsBadge">0</span></h1>
+<button onclick="showModal('clientModal')">+ Neuer Klient</button>
+
+<!-- Feedback-Nachrichten -->
+<div id="clientFeedback"></div>
+
+<!-- Grid für Klienten -->
+<div id="clientGrid"></div>
+
+<!-- Modal für Klienten-Eingabe -->
+<div id="clientModal" style="display:none;">
+  <div class="modal-content">
+    <h2>Neuen Klienten hinzufügen</h2>
+    <form>
+      <input type="text" placeholder="A.B." required>
+      <input type="text" placeholder="z.B. Diagnose" required>
+      <select required>
+        <option value="">Therapie wählen</option>
+        <option value="Physiotherapie">Physiotherapie</option>
+        <option value="Psychotherapie">Psychotherapie</option>
+        <option value="Ergotherapie">Ergotherapie</option>
+      </select>
+      <textarea placeholder="Notizen"></textarea>
+      <button type="submit">Speichern</button>
+      <button type="button" onclick="hideModal('clientModal')">Abbrechen</button>
+    </form>
+  </div>
+</div>
+
+<!-- === Klientenverwaltung ENDE === -->
+
+<!-- Dein bisheriges JS -->
+<script src="..."></script>
+
+<!-- Neues Skript für Clients -->
+<script src="clients.js"></script>
+</body>
+
 </body>
 </html>
